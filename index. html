@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mommy 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(45deg,#ffd6e0,#e7c6ff,#cdb4db,#bde0fe);
+  background-size:400% 400%;
+  animation:bg 12s ease infinite;
+}
+@keyframes bg{
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+
+.screen{
+  display:none;
+  height:100vh;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:20px;
+}
+.show{display:flex}
+
+.card{
+  background:rgba(255,255,255,0.9);
+  padding:25px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  max-width:90%;
+  animation:fade .6s ease;
+}
+
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:38px;
+}
+
+button{
+  margin-top:20px;
+  padding:14px 26px;
+  border:none;
+  border-radius:30px;
+  background:#ff6fa5;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+.gallery img{
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.bear{
+  font-size:120px;
+  animation:hug 1s infinite alternate;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes hug{
+  from{transform:scale(1)}
+  to{transform:scale(1.15)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/02/23/audio_d1718a3c0c.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SCREEN 1 -->
+<div id="s1" class="screen show">
+  <div class="card">
+    <h1>Good Morning Mommy ☀️</h1>
+    <p>
+      You are the best woman in the world in my life 💖<br>
+      So here is a small token of love from me 🫶
+    </p>
+    <button onclick="start()">Click Here ✨</button>
+  </div>
+</div>
+
+<!-- SCREEN 2 LETTER -->
+<div id="s2" class="screen">
+  <div class="card">
+    <h1>For my dearest Mommy 💌</h1>
+    <p style="line-height:1.6">
+      Thank you for always being there.<br><br>
+      Thank you for being the strongest woman in my life.<br><br>
+      I love you to the moon and back 🌙<br><br>
+      You have always been there when I needed you.<br>
+      You understood me when I couldn't understand myself.<br><br>
+      You're my best friend, my safe space,<br>
+      my warrior, my queen 👑<br><br>
+      I love you the most in this entire world. the most beautiful,elegant,intelligent woman💖
+    </p>
+    <button onclick="next(2,3)">Unlock our memories 📸</button>
+  </div>
+</div>
+
+<!-- SCREEN 3 IMAGES -->
+<div id="s3" class="screen">
+  <div class="card">
+    <h1>Our Memories ✨</h1>
+    <div class="gallery">
+      <img src="https://i.imgur.com/L6jW0Nz.jpeg">
+      <img src="https://i.imgur.com/p0g9ObI.jpeg">
+      <img src="https://i.imgur.com/MeS70Vd.jpeg">
+      <img src="https://i.imgur.com/tssgDo2.jpeg">
+    </div>
+    <p>
+      Every moment spent with you is filled with love and warmth 💖<br>
+      You're the most beautiful woman I have ever seen 🌸
+    </p>
+    <button onclick="next(3,4)">Click Me 💞</button>
+  </div>
+</div>
+
+<!-- SCREEN 4 QUESTION -->
+<div id="s4" class="screen">
+  <div class="card">
+    <h1>One question 🤍</h1>
+    <p>
+      Do you love your moti? 🥺<br>
+      Do you love your Kuchu billa? 💞
+    </p>
+    <button onclick="next(4,5)">Yes 💖</button>
+    <button onclick="next(4,5)">Yes 🫶</button>
+  </div>
+</div>
+
+<!-- SCREEN 5 FINAL -->
+<div id="s5" class="screen">
+  <div class="card">
+    <div class="bear">🧸🤗</div>
+    <p>
+      Dekho bhalu ka bacha inne.Thank you so much for loving me<br>
+      and always choosing me before yourself 💖<br><br>
+      I will always love you and pray for you 🌸<br><br>
+      You are the most beautiful woman I know 💕<br><br>
+      Have a good morning and a beautiful day ☀️
+    </p>
+  </div>
+</div>
+
+<script>
+function next(a,b){
+  document.getElementById('s'+a).classList.remove('show');
+  setTimeout(()=>{
+    document.getElementById('s'+b).classList.add('show');
+  },300);
+}
+
+function start(){
+  let music=document.getElementById("music");
+  music.play().catch(()=>{});
+  next(1,2);
+}
+</script>
+
+</body>
+</html>
