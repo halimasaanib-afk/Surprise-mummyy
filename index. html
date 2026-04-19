@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -117,7 +117,7 @@ button{
       You understood me when I couldn't understand myself.<br><br>
       You're my best friend, my safe space,<br>
       my warrior, my queen 👑<br><br>
-      I love you the most in this entire world. the most beautiful,elegant,intelligent woman💖
+      I love you the most in this entire world 💖
     </p>
     <button onclick="next(2,3)">Unlock our memories 📸</button>
   </div>
@@ -149,8 +149,8 @@ button{
       Do you love your moti? 🥺<br>
       Do you love your Kuchu billa? 💞
     </p>
-    <button onclick="next(4,5)">Yes 💖</button>
-    <button onclick="next(4,5)">Yes 🫶</button>
+    <button onclick="next(4,5)">Yes a bit💖</button>
+    <button onclick="next(4,5)">Yes alot🫶</button>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ button{
   <div class="card">
     <div class="bear">🧸🤗</div>
     <p>
-      Dekho bhalu ka bacha inne.Thank you so much for loving me<br>
+      Thank you so much for loving me<br>
       and always choosing me before yourself 💖<br><br>
       I will always love you and pray for you 🌸<br><br>
       You are the most beautiful woman I know 💕<br><br>
